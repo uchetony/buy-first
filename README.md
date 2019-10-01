@@ -1,6 +1,7 @@
 # Buyfirst
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+This project is one of my personal projects. It is a fictional ecommerce store.
 
 ## Development server
 
