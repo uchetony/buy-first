@@ -12,5 +12,6 @@ export const appRoutes: Routes = [
     { path: 'shopping-cart', component: ShoppingCartComponent},
     { path: 'checkout', component: CheckOutComponent},
     { path: 'order-success', component: OrderSuccessComponent},
-    { path: 'login', component: LoginComponent}
+    { path: 'login', component: LoginComponent},
+    { path: "", redirectTo: '/home', pathMatch: 'full'}
 ]
