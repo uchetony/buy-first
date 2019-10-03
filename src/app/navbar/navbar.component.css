@@ -8,9 +8,12 @@
 .dropdown-list {
     margin: .5rem;
 }
+.dropdown-list.signOut {
+    cursor: pointer;
+}
 
 .dropdown-menu {
-    left: -100%;
+    left: -50%;
 }
 
 .nav-item img {

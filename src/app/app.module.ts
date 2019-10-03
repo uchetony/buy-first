@@ -1,11 +1,12 @@
+import { AuthServiceService } from './services/auth/auth-service.service';
 import { appRoutes } from './routes/app-routes';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule} from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth'
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth'
 
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
@@ -42,7 +43,11 @@ import { RouterModule } from '@angular/router';
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [
+    AngularFireAuth,
+    AngularFireDatabase,
+    // AuthServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
