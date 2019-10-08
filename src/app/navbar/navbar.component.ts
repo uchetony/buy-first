@@ -1,3 +1,4 @@
+import { ToastrServiceService } from './../services/toastr/toastr-service.service';
 import { AuthServiceService } from './../services/auth/auth-service.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -21,7 +22,8 @@ export class NavbarComponent implements OnInit {
     {name: "User Activity", link: "/dashboard/useractivity", admin: true}
   ]
 
-  constructor(private authService: AuthServiceService) { 
+  constructor(private authService: AuthServiceService,
+              private toast: ToastrServiceService) { 
 
   }
 
@@ -34,6 +36,7 @@ export class NavbarComponent implements OnInit {
   logout() {
     // logs the user out
     this.authService.logout()
+
   }
 
 }

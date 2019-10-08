@@ -1,1 +1,25 @@
-<p>manage-products works!</p>
+<p>
+    <a routerLink="/dashboard/manageproducts/new-product" class="btn btn-primary">New Product</a>
+</p>
+ 
+<p>
+    <input type="text" name="searchProduct" id="searchProduct" class="form-control" placeholder="Search..." (keyup)="filter(query.value)" #query>
+</p>
+        
+<table class="table">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Price</td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productName}}</td>
+            <td>{{product.productPrice | currency:"USD":true}}</td>
+            <td><a [routerLink]="['/dashboard/manageproducts', product.key]">Edit</a></td>
+        </tr>
+    </tbody>
+</table>

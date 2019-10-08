@@ -1,0 +1,100 @@
+
+<div class="row">
+    <div class="col-md-6">
+        <form #productForm = "ngForm" (ngSubmit)= "save(productForm.value)">
+            <h1>Create New Product</h1>
+        
+            <div class="form-group">
+        
+                <label for="productName">Product Name</label>
+                <input type="text" name="productName" id="productName" class="form-control" [(ngModel)]="product.productName" #productName = "ngModel" required pattern="[A-Za-z]+" minlength="3">
+                
+                <!-- List of error messages -->
+                <div *ngIf = "productName.invalid && (productName.dirty || productName.touched)" class="alert alert-danger">
+                    <div *ngIf = "productName.errors.required" >
+                        This field is required
+                    </div>
+                    <div *ngIf = "productName.errors.pattern" >
+                        This field should not contain numbers, symbols or spaces
+                    </div>
+                    <div *ngIf = "productName.errors.minlength" >
+                        Name too short        
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="form-group">
+        
+                <label for="productPrice" class="form-label">Product Price</label>
+                <input type="tel" class="form-control" name="productPrice" id="productPrice" [(ngModel)]="product.productPrice" #productPrice="ngModel" required pattern="[0-9]+" minlength="1" maxlength="11">
+                
+                <!-- List of of validation errors -->
+                <div *ngIf="productPrice.invalid && (productPrice.dirty || productPrice.touched)" class="error-modal">
+                    <div *ngIf = "productPrice.errors.required" >
+                        This field is required
+                    </div>
+                    <div *ngIf = "productPrice.errors.pattern" >
+                        This field should contain only numbers
+                    </div>
+                    <div *ngIf = "productPrice.errors.minlength" >
+                        Price too short        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+        
+                <label for="productImage">Image Url</label>
+                <input type="text" name="productImage" id="productImage" class="form-control" [(ngModel)]="product.productImage" #productImage = "ngModel" required  minlength="3">
+                
+                <!-- List of error messages -->
+                <div *ngIf = "productImage.invalid && (productImage.dirty || productImage.touched)" class="alert alert-danger">
+                    <div *ngIf = "productImage.errors.required" >
+                        This field is required
+                    </div>
+                    <div *ngIf = "productImage.errors.minlength" >
+                        Value too short        
+                    </div>
+                </div>
+        
+            </div>
+            
+        
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select name="category" id="category" class="form-control"   [(ngModel)]="product.category" #category = "ngModel" required>
+                    <option value="null"></option>
+                    <option *ngFor= "let category of category$ | async">{{category.name}}</option>
+                </select>
+        
+                <!-- List of error messages -->
+                <div *ngIf = "category.invalid && (category.dirty || category.touched)" class="alert alert-danger">
+                    <div *ngIf = "category.errors.required">
+                        This field is required
+                    </div>
+                </div>
+            </div>  
+            
+            
+                <button class="btn btn-primary" [disabled] = "!productForm.form.valid" type="submit">Save Product</button>
+            
+            
+                <button class="btn btn-danger" [disabled] = "!productForm.form.valid" type="button" (click)="delete()">Delete Product</button>
+            
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="card" style="width: 18rem;">
+            <img [src]="productImage.value" class="card-img-top" alt="Buyfirst Product" *ngIf="product.productImage">
+            <div class="card-body">
+              <h5 class="card-title">Product Name: {{product.productName}}</h5>
+              <p class="card-text">Price: {{product.productPrice | currency:"USD":true}}</p>
+              <p class="card-text">Category: {{product.category}}</p>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+

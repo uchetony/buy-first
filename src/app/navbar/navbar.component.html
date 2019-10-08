@@ -1,15 +1,21 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <!-- navbar brand -->
     <a class="navbar-brand ml-5" routerLink="/">BuyFirst</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
-        <form class="form-inline mx-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
+      <!-- search box -->
+      <form class="form-inline mx-auto">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+      <!-- navbar links -->
       <ul class="navbar-nav mr-5">
         <li class="nav-item active">
           <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
@@ -26,24 +32,32 @@
         <li class="nav-item">
           <a class="nav-link disabled" tabindex="-1" aria-disabled="true">|</a>
         </li>
+
+        <!-- Login or user area -->
         <ng-template #guestLogin>
           <li class="nav-item">
             <a class="nav-link" routerLink="/login">Login</a>
           </li> 
         </ng-template>      
-        <li class="nav-item" *ngIf="user">
+        <li class="nav-item" *ngIf="appUser">
             <img src="../../assets/images/user-male.png" alt="" height="50" width="50">
         </li>
     
         <li class="nav-item dropdown" ngbDropdown *ngIf="appUser; else guestLogin">
           <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Hi, {{appUser.name}} </a>
           <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
-            <a class="dropdown-list">Dashboard</a>
-            <div class="dropdown-divider"></div>
+            
+            <!-- if the user is an admin, display all the dashboard content -->
             <ng-container *ngIf="appUser.isAdmin; else guestDashboard">
+                <a class="dropdown-list">Admin Dashboard</a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" routerLink="{{userDropdown.link}}" ngbDropdownItem *ngFor="let userDropdown of userDropdownList">{{userDropdown.name}}</a>
             </ng-container>
+            
+            <!-- for non admin users -->
             <ng-template #guestDashboard>
+                <a class="dropdown-list">User Dashboard</a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" routerLink="/dashboard/myorders" ngbDropdownItem>My orders</a>
             </ng-template>
              <div class="dropdown-divider"></div>

@@ -1,5 +1,6 @@
+import { ToastrServiceService } from './../toastr/toastr-service.service';
 import { UsersService } from './../users/users.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
@@ -23,7 +24,9 @@ export class AuthServiceService {
 
   constructor(private afAuth: AngularFireAuth,
               private routes: ActivatedRoute,
-              private userService: UsersService) { 
+              private userService: UsersService,
+              private router: Router,
+              private toastr: ToastrServiceService) { 
     // this observable is unwrapped in the template using the async pipe.
     // this is done so that user$ is automatically unsubscribed from, when the
     // component is killed.
@@ -40,6 +43,15 @@ export class AuthServiceService {
 
   logout() {
     this.afAuth.auth.signOut();
+
+    // if (this.router.url !== '/login') {
+    //   // Toastr message
+    //   this.toastr.warning('Logged Out');
+      
+    //   // navigate the user back to the login page
+    //   this.router.navigate(['/login'])
+    // }
+
   }
 
   // this gets the app users from the database

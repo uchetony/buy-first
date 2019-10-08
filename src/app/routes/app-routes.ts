@@ -10,6 +10,7 @@ import { AuthGuardService } from '../services/auth/auth-guard.service'
 import { MyOrdersComponent } from '../dashboard/my-orders/my-orders.component'
 import { ManageProductsComponent } from '../dashboard/manage-products/manage-products.component'
 import { UserActivityComponent } from '../dashboard/user-activity/user-activity.component'
+import { NewProductComponent } from '../dashboard/new-product/new-product.component';
 
 export const appRoutes: Routes = [
     // Routes accessible to anonymous users
@@ -27,7 +28,10 @@ export const appRoutes: Routes = [
 
     
     // Routes accessible to admins only
+    { path: 'dashboard/manageproducts/new-product', component: NewProductComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+    { path: 'dashboard/manageproducts/:id', component: NewProductComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
     { path: 'dashboard/manageproducts', component: ManageProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
-    { path: 'dashboard/useractivity', component: UserActivityComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+    { path: 'dashboard/useractivity', component: UserActivityComponent, canActivate: [AuthGuardService, AdminAuthGuardService]}
+    ,
     
 ]

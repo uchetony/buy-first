@@ -1,3 +1,4 @@
+import { ProductService } from './services/product/product.service';
 import { AuthServiceService } from './services/auth/auth-service.service';
 import { appRoutes } from './routes/app-routes';
 
@@ -21,6 +22,8 @@ import { MyOrdersComponent } from './dashboard/my-orders/my-orders.component';
 import { UserActivityComponent } from './dashboard/user-activity/user-activity.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { NewProductComponent } from './dashboard/new-product/new-product.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,17 +38,20 @@ import { RouterModule } from '@angular/router';
     ManageProductsComponent,
     MyOrdersComponent,
     UserActivityComponent,
-    LoginComponent
+    LoginComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     NgbModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
+    ProductService
     // AuthServiceService
   ],
   bootstrap: [AppComponent]
