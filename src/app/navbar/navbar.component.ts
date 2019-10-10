@@ -5,6 +5,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
 import { AppUser } from '../models/app-user/app-user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bf-navbar',
@@ -23,7 +24,8 @@ export class NavbarComponent implements OnInit {
   ]
 
   constructor(private authService: AuthServiceService,
-              private toast: ToastrServiceService) { 
+              private toast: ToastrServiceService,
+              private router: Router) { 
 
   }
 
@@ -33,10 +35,16 @@ export class NavbarComponent implements OnInit {
     ) 
   }
 
-  logout() {
-    // logs the user out
-    this.authService.logout()
+  async logout() {
+    // if the user confirms logout
+    if (confirm("You are logging out of your account. Proceed?")) {
 
+      // logs the user out
+      await this.authService.logout()
+
+      // then redirect the user to the login page.
+      this.router.navigate(['/login'])
+    }
   }
 
 }

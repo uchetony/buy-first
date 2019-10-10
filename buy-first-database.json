@@ -1,0 +1,142 @@
+{
+  "categories" : {
+    "bread" : {
+      "name" : "Bread"
+    },
+    "dairy" : {
+      "name" : "Dairy"
+    },
+    "fruits" : {
+      "name" : "Fruits"
+    },
+    "seasonings" : {
+      "name" : "Seasonings and Spices"
+    },
+    "vegetables" : {
+      "name" : "Vegetables"
+    }
+  },
+  "products" : {
+    "-KrqgOLs07ZkbapP4EGi" : {
+      "category" : "vegetables",
+      "productImage" : "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
+      "productName" : "Spinach",
+      "productPrice" : 2.5
+    },
+    "-KrrIkDT19XhPgWo0T0A" : {
+      "category" : "bread",
+      "productImage" : "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+      "productName" : "Freshly Baked Bread",
+      "productPrice" : 3
+    },
+    "-KrvrXbV3rqnFEru_ojw" : {
+      "category" : "fruits",
+      "productImage" : "https://storage.needpix.com/rsynced_images/fruto-abacate.jpg",
+      "productName" : "Avacado",
+      "productPrice" : 1.75
+    },
+    "-KrvrgogC3oac5k83Awt" : {
+      "category" : "vegetables",
+      "productImage" : "https://static.pexels.com/photos/8390/food-wood-tomatoes.jpg",
+      "productName" : "Tomato",
+      "productPrice" : 2.5
+    },
+    "-Krvrt2nkeRw2HCbiGDj" : {
+      "category" : "vegetables",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lettuce_Mini_Heads_%287331119710%29.jpg",
+      "productName" : "Lettuce",
+      "productPrice" : 1
+    },
+    "-Krvs0ZZBpz5GuM0RfC8" : {
+      "category" : "vegetables",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cauliflowers_-_20051021.jpg/1280px-Cauliflowers_-_20051021.jpg",
+      "productName" : "Cauliflower",
+      "productPrice" : 1.75
+    },
+    "-Krvs7RuXkSiDZvBZmey" : {
+      "category" : "fruits",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bananas.jpg/1024px-Bananas.jpg",
+      "productName" : "Banana",
+      "productPrice" : 1.25
+    },
+    "-KrvsKZbI_mpo3hJg7G7" : {
+      "category" : "fruits",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg",
+      "productName" : "Orange",
+      "productPrice" : 1.7
+    },
+    "-KrvsRNOg-ftEUM3Te-F" : {
+      "category" : "fruits",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+      "productName" : "Apple",
+      "productPrice" : 2
+    },
+    "-Krvs_CiDXdiZ3yd0PUp" : {
+      "category" : "fruits",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/3/36/Kyoho-grape.jpg",
+      "productName" : "Grape",
+      "productPrice" : 2
+    },
+    "-KrvsfKjGc0NCM0prc0I" : {
+      "category" : "fruits",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/9/9e/Autumn_Red_peaches.jpg",
+      "productName" : "Peach",
+      "productPrice" : 2
+    },
+    "-KrvsrmX3I1-Bo6eFCdx" : {
+      "category" : "seasonings",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cinnamon-other.jpg",
+      "productName" : "Cinnamon Sticks",
+      "productPrice" : 0.5
+    },
+    "-KrvsxvxOmTzMXOSx7iG" : {
+      "category" : "seasonings",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/4/48/Saffron_Crop.JPG",
+      "productName" : "Saffron",
+      "productPrice" : 3
+    },
+    "-Krvt8G_naLT8Pg_Fob6" : {
+      "category" : "seasonings",
+      "productImage" : "http://maxpixel.freegreatpicture.com/static/photo/1x/Seasoning-Powder-Curry-Spice-Ingredient-Turmeric-2344157.jpg",
+      "productName" : "Ground Turmeric",
+      "productPrice" : 0.75
+    },
+    "-KrvtXWZvGv-mr0IFbAA" : {
+      "category" : "seasonings",
+      "productImage" : "http://maxpixel.freegreatpicture.com/static/photo/1x/Ingredient-Herb-Seasoning-Seeds-Food-Coriander-390015.jpg",
+      "productName" : "Coriander Seeds",
+      "productPrice" : 0.5
+    },
+    "-Krvtvc_uQyh6dzI-J3R" : {
+      "category" : "bread",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Fabrication_du_lavash_%C3%A0_Noravank_%286%29.jpg/1280px-Fabrication_du_lavash_%C3%A0_Noravank_%286%29.jpg",
+      "productName" : "Lavash Bread",
+      "productPrice" : 1.25
+    },
+    "-Krvu3aL-m-ku0yCnQGr" : {
+      "category" : "bread",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bagel-Plain-Alt.jpg",
+      "productName" : "Bagel Bread",
+      "productPrice" : 1
+    },
+    "-KrvuH_bkBBZDW0NCwfl" : {
+      "category" : "fruits",
+      "productImage" : "https://upload.wikimedia.org/wikipedia/commons/e/e1/Strawberries.jpg",
+      "productName" : "Strawberry",
+      "productPrice" : 1.95
+    },
+    "-KrvuT7GtYfsFvmQfgoj" : {
+      "category" : "bread",
+      "productImage" : "https://static.pexels.com/photos/416607/pexels-photo-416607.jpeg",
+      "productName" : "Baguette Bread",
+      "productPrice" : 1.25
+    }
+  },
+  "users" : {
+    "olrWo1FODpRB9W4QRO9qt0oUjsA2" : {
+      "email" : "uchetony007@gmail.com",
+      "isAdmin" : true,
+      "name" : "Anthony Uche"
+    }
+  }
+}

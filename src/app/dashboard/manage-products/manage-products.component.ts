@@ -17,7 +17,8 @@ export class ManageProductsComponent implements OnInit,OnDestroy {
   constructor(private prodService: ProductService) { }
 
   ngOnInit() {
-    // use snapshotChanges().pipe(map()) to store the key from the database
+    
+    // use snapshotChanges().pipe(map()) to get the products along with their key from the database
     this.subscription = this.prodService.getAll().snapshotChanges().pipe(map(
       changes => changes.map(c => ({key: c.payload.key, ...c.payload.val()}))
     )).subscribe(product => this.filteredProducts = this.products = product)

@@ -85,16 +85,16 @@
         </form>
     </div>
     <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
+        <!-- <div class="card" style="width: 18rem;">
             <img [src]="productImage.value" class="card-img-top" alt="Buyfirst Product" *ngIf="product.productImage">
             <div class="card-body">
               <h5 class="card-title">Product Name: {{product.productName}}</h5>
-              <p class="card-text">Price: {{product.productPrice | currency:"USD":true}}</p>
+              <p class="card-text">Price: {{product.productPrice | currency:"USD":"symbol"}}</p>
               <p class="card-text">Category: {{product.category}}</p>
             </div>
-          </div>
+          </div> -->
+          <bf-product-card [product]="product" [form]="productForm"></bf-product-card>
     </div>
 </div>
-
 
 

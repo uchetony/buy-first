@@ -18,7 +18,7 @@
     <tbody>
         <tr *ngFor="let product of products">
             <td>{{product.productName}}</td>
-            <td>{{product.productPrice | currency:"USD":true}}</td>
+            <td>{{product.productPrice | currency:"USD":"symbol"}}</td>
             <td><a [routerLink]="['/dashboard/manageproducts', product.key]">Edit</a></td>
         </tr>
     </tbody>

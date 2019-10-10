@@ -1,0 +1,13 @@
+<div class="col px-1">
+    <div class="card  mx-0" style="width:17rem;">
+        <img src="{{product.productImage}}" class="card-img-top" alt="Buy first product image" height="150">
+        <div class="card-body">
+            <h5 class="card-title">{{product.productName}}</h5>
+            <p class="card-text">{{product.productPrice | currency:"USD":"symbol"}}</p>
+            <p class="card-text">Category: {{product.category}}</p>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-block" *ngIf="!form">Add to cart</a>
+        </div>
+     </div>
+</div>

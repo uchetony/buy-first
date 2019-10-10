@@ -1,6 +1,7 @@
 export interface Product {
     productName: string
-    productPrice: number
+    productPrice: string
     category: string
     productImage: string
+    
 }

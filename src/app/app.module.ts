@@ -24,6 +24,8 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { NewProductComponent } from './dashboard/new-product/new-product.component';
 import { FormsModule } from '@angular/forms';
+import { ProductCardComponent } from './products/product-card/product-card.component';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { FormsModule } from '@angular/forms';
     MyOrdersComponent,
     UserActivityComponent,
     LoginComponent,
-    NewProductComponent
+    NewProductComponent,
+    ProductCardComponent,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,

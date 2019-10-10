@@ -1,1 +1,17 @@
-<p>products works!</p>
+
+<div class="row">
+    <div class="col-3">
+        <bf-product-filter [category]="category" [activeCategory]="activeCategory"></bf-product-filter>
+    </div>
+    
+    <div class="col">
+        <div class="row">
+            <ng-container  *ngFor="let product of filteredProducts; let i=index">
+                <bf-product-card [product]="product"></bf-product-card>
+                <div class="w-100 my-2" *ngIf="(i+1) % 3 === 0"></div>
+            </ng-container>   
+        </div>
+    </div>
+</div>
+
+
